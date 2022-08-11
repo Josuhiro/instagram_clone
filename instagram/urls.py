@@ -22,7 +22,7 @@ from django.contrib.auth import views as authViews
 urlpatterns = [
     path('', authViews.LoginView.as_view(template_name='login.html'), name='login'),
     path('admin/', admin.site.urls),
-    path('user/', include('authy.urls')),
+    path('uzytkownik/', include('authy.urls')),
     path('posty/', include('post.urls')),
     path('powiadomienia/', include('notifications.urls')),
     path('<username>/', userProfile, name='profile'),
